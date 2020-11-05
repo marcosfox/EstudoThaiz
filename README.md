@@ -1,0 +1,2 @@
+# EstudoThaiz
+Para thaiz estudar
