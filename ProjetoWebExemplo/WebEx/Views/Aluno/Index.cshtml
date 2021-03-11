@@ -1,0 +1,46 @@
+﻿@model WebEx.Models.AlunoViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/bootstrap")
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnConfirmar').on("click", function () {
+                $.ajax({
+                    url: "/Aluno/Confirmar",
+                    method: "POST",
+                    contentType: "application/json",
+                    dataType: "json",
+                    data: JSON.stringify({
+                        objView: {
+                            matricula: $('#matAluno').val(),
+                            nome: $('#nomeAluno').val(),
+                            telefone: $('#TelAluno').val(),
+                            CPF: $('#CPFAluno').val()
+                        }
+                    })
+                });
+            });
+        });
+    </script>
+    <title>Index</title>
+</head>
+<body>
+    <div>Matricula: <input type="text" id="matAluno" /></div>
+    <div>Nome: <input type="text" id="nomeAluno" /></div>
+    <div>Telefone: <input type="text" id="TelAluno" /></div>
+    <div>CPF: <input type="text" id="CPFAluno" /></div>
+    <div>
+        @ViewBag.Mensagem
+    </div>
+    <input type="button" id="btnConfirmar" value="Confirmar" class="btn btn-primary" />
+</body>
+</html>
