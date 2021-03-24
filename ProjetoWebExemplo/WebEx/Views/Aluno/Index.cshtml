@@ -1,4 +1,4 @@
-﻿@model WebEx.Models.AlunoViewModel
+﻿
 @{
     Layout = null;
 }
@@ -10,37 +10,40 @@
     @Scripts.Render("~/bundles/jquery")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/aluno")
     <meta name="viewport" content="width=device-width" />
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#btnConfirmar').on("click", function () {
-                $.ajax({
-                    url: "/Aluno/Confirmar",
-                    method: "POST",
-                    contentType: "application/json",
-                    dataType: "json",
-                    data: JSON.stringify({
-                        objView: {
-                            matricula: $('#matAluno').val(),
-                            nome: $('#nomeAluno').val(),
-                            telefone: $('#TelAluno').val(),
-                            CPF: $('#CPFAluno').val()
-                        }
-                    })
-                });
-            });
-        });
-    </script>
     <title>Index</title>
 </head>
 <body>
-    <div>Matricula: <input type="text" id="matAluno" /></div>
-    <div>Nome: <input type="text" id="nomeAluno" /></div>
-    <div>Telefone: <input type="text" id="TelAluno" /></div>
-    <div>CPF: <input type="text" id="CPFAluno" /></div>
+    <div class="col-md-1">Nome:</div>
+    <div class="col-md-3"><input type="text" id="nomeAluno" /></div>
+    <div class="col-md-1">Telefone:</div>
+    <div class="col-md-3"><input type="text" id="TelAluno" /></div>
+    <div class="col-md-1">CPF:</div>
+    <div class="col-md-3"><input type="text" id="CPFAluno" /></div>
+    <div class="col-md-1">Email:</div>
+    <div class="col-md-3"><input type="text" id="emailAluno" /></div>
     <div>
-        @ViewBag.Mensagem
+        <table id="tblResultAluno" width="100%">
+            <thead>
+                <tr>
+                    <th>Nome aluno</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Clique para pesquisar um aluno utilizando os filtros da tela.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <input type="button" id="btnConfirmar" value="Confirmar" class="btn btn-primary" />
+    <div>
+        <input type="button" id="btnNovo" value="Novo" class="btn btn-primary" />
+    </div>
+    <div>
+        <input type="button" id="btnPesquisar" value="Pesquisar" class="btn btn-primary" />
+    </div>
 </body>
 </html>

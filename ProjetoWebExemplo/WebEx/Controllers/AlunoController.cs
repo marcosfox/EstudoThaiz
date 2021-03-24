@@ -1,27 +1,46 @@
-﻿using System;
+﻿using Domain.Interfaces.Services;
+using Infrastruct.DTO;
+using Services.Academico;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebEx.Models;
-
 namespace WebEx.Controllers
 {
     public class AlunoController : Controller
     {
+        IAlunoService _alunoService;
         public ActionResult Index()
         {
-            ViewBag.Mensagem = "Funcionou";
+            return View();
+        }
+        public ActionResult Novo()
+        {
             return View();
         }
         [HttpPost]
-        public ActionResult Confirmar(AlunoViewModel objView)
+        public ActionResult Pesquisar(AlunoDTO alunoDTO)
         {
-            if (objView.matricula != "")
-                ViewBag.Mensagem = ViewBag.Mensagem + ": de novo";
-            else
-                ViewBag.Mensagem = ViewBag.Mensagem + ": erro";
-            return View("Index");
+            _alunoService = new AlunoService();
+
+            return Json(_alunoService.FindByFilter(alunoDTO), JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult Adicionar(AlunoDTO alunoDTO)
+        {
+            try
+            {
+                _alunoService = new AlunoService();
+
+                _alunoService.Add(alunoDTO);
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json( new { success = false, erro = ex.Message });
+            }
         }
     }
 }

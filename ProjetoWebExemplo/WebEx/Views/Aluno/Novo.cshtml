@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/aluno")
+    <meta name="viewport" content="width=device-width" />
+    <title>Novo</title>
+</head>
+<body>
+    <div style="padding: 10px">
+        <div class="row">
+            <div class="col-md-1">Nome:</div>
+            <div class="col-md-3"><input type="text" id="nomeAluno" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">Telefone:</div>
+            <div class="col-md-3"><input type="text" id="TelAluno" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">CPF:</div>
+            <div class="col-md-3"><input type="text" id="CPFAluno" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">Email:</div>
+            <div class="col-md-3"><input type="text" id="emailAluno" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <input type="button" id="btnAdicionar" value="Adicionar" class="btn btn-primary" />
+            </div>
+            <div class="col-md-1">
+                <input type="button" id="btnVoltar" value="Voltar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

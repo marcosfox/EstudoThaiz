@@ -235,3 +235,14 @@ C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\obj\Debug\WebEx.csp
 C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\obj\Debug\WebEx.csproj.CopyComplete
 C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\obj\Debug\WebEx.dll
 C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\obj\Debug\WebEx.pdb
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Infrastruct.dll
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Services.dll
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Repository.dll
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\EntityFramework.dll
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Infrastruct.pdb
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Services.pdb
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Repository.pdb
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\Repository.dll.config
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\EntityFramework.xml
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\EntityFramework.SqlServer.dll
+C:\Users\aluga.com\Desktop\Teste\Git\ProjetoWebExemplo\WebEx\bin\EntityFramework.SqlServer.xml

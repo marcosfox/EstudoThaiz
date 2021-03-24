@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ProjetoWebExemplo/Infrastruct/bin/Debug
+/ProjetoWebExemplo/Infrastruct/obj/Debug
+/ProjetoWebExemplo/Repository/bin/Debug
+/ProjetoWebExemplo/Repository/obj/Debug
+/ProjetoWebExemplo/Services/bin/Debug
+/ProjetoWebExemplo/Services/obj/Debug
